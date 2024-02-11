@@ -1,0 +1,25 @@
+{
+  "name": "basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "wrangler pages dev ./dist",
+    "deploy": "$npm_execpath run build && wrangler pages deploy ./dist"
+  },
+  "private": true,
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "@markdoc/markdoc": "^0.4.0",
+    "hono": "^4.0.0",
+    "honox": "^0.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "@hono/vite-cloudflare-pages": "^0.2.4",
+    "vite": "^5.0.12",
+    "wrangler": "^3.28.1"
+  },
+  "packageManager": "yarn@4.0.2"
+}
